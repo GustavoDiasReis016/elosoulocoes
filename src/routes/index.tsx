@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ShieldCheck, Users, Gem, Link2, Target, Eye, Heart, User, Briefcase,
-  CreditCard, FileText, Umbrella, Car, Home, Handshake, Phone, Instagram, Globe,
+  Phone, Instagram, Globe,
 } from "lucide-react";
-import logo from "@/assets/elo-logo.png.asset.json";
+import logo from "@/assets/elo-logo-hd.png";
+import logoHeader from "@/assets/elo-logo-header.png";
+import escritorio from "@/assets/elo-escritorio.png.asset.json";
 import hero from "@/assets/hero.jpg";
 
 export const Route = createFileRoute("/")({
@@ -27,22 +29,16 @@ const valores = [
   { icon: Link2, t: "Conexão", d: "Relacionamentos geram resultados." },
   { icon: Target, t: "Movimento", d: "Transformamos possibilidades em conquistas." },
 ];
-const servicos = [
-  { icon: CreditCard, t: "Crédito" }, { icon: FileText, t: "Consórcios" },
-  { icon: Umbrella, t: "Seguros" }, { icon: Car, t: "Veículos" },
-  { icon: Home, t: "Imóveis" }, { icon: Handshake, t: "Negócios" },
-];
 const bancos = ["Banco Pan", "Aki Capital", "Digio", "Daycoval", "Futuro Previdência", "BMG", "Neo Crédito"];
 
 function Index() {
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-gold/20">
+      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-gold/30">
         <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-3">
-          <span className="text-2xl font-semibold tracking-[0.3em] text-gold-gradient">ELO</span>
-          <nav className="hidden md:flex gap-8 text-sm text-navy-foreground/80">
+          <a href="#"><img src={logoHeader} alt="ELO Soluções" className="h-14 w-auto" /></a>
+          <nav className="hidden md:flex gap-8 text-sm font-medium text-foreground">
             <a href="#sobre" className="hover:text-gold">Sobre</a>
-            <a href="#servicos" className="hover:text-gold">Serviços</a>
             <a href="#parceiros" className="hover:text-gold">Parceiros</a>
             <a href="#contato" className="hover:text-gold">Contato</a>
           </nav>
@@ -54,19 +50,16 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent" />
         <div className="relative mx-auto max-w-6xl px-6 py-28 md:py-40">
           <p className="text-xs tracking-[0.35em] text-gold uppercase">Pessoas · Negócios · Oportunidades</p>
-          <h1 className="mt-6 text-5xl md:text-7xl font-light tracking-[0.2em]">
-            <span className="text-gold-gradient font-semibold">ELO</span>
-            <span className="block text-2xl md:text-3xl tracking-[0.5em] mt-2 text-gold">SOLUÇÕES</span>
-          </h1>
-          <p className="mt-8 max-w-md text-xl italic text-navy-foreground/90">Conectando você às melhores oportunidades.</p>
-          <a href="#contato" className="mt-10 inline-block rounded-full bg-gold-gradient px-8 py-3 font-semibold text-navy shadow-soft transition hover:scale-105">Fale conosco</a>
+          <h1 className="sr-only">ELO Soluções</h1>
+          <div className="mt-8 inline-block rounded-3xl bg-cream p-6 shadow-soft">
+            <img src={logo} alt="Logo ELO Soluções" className="w-64 md:w-80" />
+          </div>
+                    <a href="#contato" className="mt-10 table rounded-full bg-gold-gradient px-8 py-3 font-semibold text-navy shadow-soft transition hover:scale-105">Fale conosco</a>
         </div>
       </section>
 
       <section id="sobre" className="mx-auto max-w-6xl px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <div className="rounded-3xl bg-cream p-8 shadow-soft flex justify-center">
-          <img src={logo.url} alt="Logo ELO Soluções" className="max-w-xs w-full" />
-        </div>
+        <img src={escritorio.url} alt="Escritório da ELO Soluções" className="w-full rounded-3xl shadow-soft" loading="lazy" />
         <div className="space-y-8">
           {[
             { icon: Target, t: "Nossa Missão", d: "Conectar pessoas, negócios e oportunidades por meio de soluções que gerem valor e façam sentido para cada momento." },
@@ -99,19 +92,6 @@ function Index() {
         </div>
       </section>
 
-      <section id="servicos" className="mx-auto max-w-6xl px-6 py-24">
-        <h2 className="text-center text-4xl font-bold">Nossas <span className="text-gold-gradient">Soluções</span></h2>
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
-          {servicos.map((s) => (
-            <div key={s.t} className="group rounded-2xl border border-border bg-card p-8 text-center shadow-soft transition hover:-translate-y-1 hover:border-gold">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-navy">
-                <s.icon className="h-7 w-7 text-gold" />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold">{s.t}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <section className="bg-secondary py-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
