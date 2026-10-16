@@ -19,6 +19,12 @@
  */
 
 @theme inline {
+  --font-display: "Montserrat", sans-serif;
+  --font-script: "Great Vibes", cursive;
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-gold: var(--gold);
+  --color-cream: var(--cream);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,21 +68,27 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 1rem;
+  --navy: oklch(0.22 0.06 262);
+  --navy-foreground: oklch(0.96 0.015 85);
+  --gold: oklch(0.74 0.11 72);
+  --cream: oklch(0.96 0.015 85);
+  --background: oklch(0.975 0.01 85);
+  --foreground: oklch(0.22 0.06 262);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.22 0.06 262);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.22 0.06 262);
+  --primary: oklch(0.22 0.06 262);
+  --primary-foreground: oklch(0.96 0.015 85);
+  --secondary: oklch(0.93 0.025 80);
+  --secondary-foreground: oklch(0.22 0.06 262);
+  --muted: oklch(0.94 0.015 85);
+  --muted-foreground: oklch(0.45 0.03 262);
+  --accent: oklch(0.74 0.11 72);
+  --accent-foreground: oklch(0.22 0.06 262);
+  --gradient-gold: linear-gradient(135deg, oklch(0.62 0.1 60), oklch(0.82 0.1 80), oklch(0.62 0.1 60));
+  --shadow-soft: 0 20px 40px -20px oklch(0.22 0.06 262 / 25%);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.929 0.013 255.508);
@@ -140,5 +152,19 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-display);
   }
+}
+
+@utility text-gold-gradient {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility bg-gold-gradient {
+  background: var(--gradient-gold);
+}
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
 }
