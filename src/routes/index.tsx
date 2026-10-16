@@ -5,6 +5,13 @@ import {
 } from "lucide-react";
 import logo from "@/assets/elo-logo-hd.png";
 import logoHeader from "@/assets/elo-logo-header.png";
+import b_pan from "@/assets/bancos/pan.png";
+import b_aki from "@/assets/bancos/aki.png";
+import b_digio from "@/assets/bancos/digio.png";
+import b_daycoval from "@/assets/bancos/daycoval.png";
+import b_futuro from "@/assets/bancos/futuro.png";
+import b_bmg from "@/assets/bancos/bmg.png";
+import b_neo from "@/assets/bancos/neo.png";
 import escritorio from "@/assets/elo-escritorio.png.asset.json";
 import hero from "@/assets/hero.jpg";
 
@@ -29,7 +36,11 @@ const valores = [
   { icon: Link2, t: "Conexão", d: "Relacionamentos geram resultados." },
   { icon: Target, t: "Movimento", d: "Transformamos possibilidades em conquistas." },
 ];
-const bancos = ["Banco Pan", "Aki Capital", "Digio", "Daycoval", "Futuro Previdência", "BMG", "Neo Crédito"];
+const bancos = [
+  { n: "Banco Pan", src: b_pan }, { n: "Aki Capital", src: b_aki }, { n: "Digio", src: b_digio },
+  { n: "Daycoval", src: b_daycoval }, { n: "Futuro Previdência", src: b_futuro }, { n: "BMG", src: b_bmg },
+  { n: "Neo Crédito", src: b_neo },
+];
 
 function Index() {
   return (
@@ -48,13 +59,27 @@ function Index() {
       <section className="relative overflow-hidden bg-navy text-navy-foreground">
         <img src={hero} alt="Aperto de mãos ao pôr do sol" width={1600} height={1008} className="absolute inset-0 h-full w-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent" />
-        <div className="relative mx-auto max-w-6xl px-6 py-28 md:py-40">
-          <p className="text-xs tracking-[0.35em] text-gold uppercase">Pessoas · Negócios · Oportunidades</p>
-          <h1 className="sr-only">ELO Soluções</h1>
-          <div className="mt-8 inline-block rounded-3xl bg-cream p-6 shadow-soft">
-            <img src={logo} alt="Logo ELO Soluções" className="w-64 md:w-80" />
+        <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32 grid md:grid-cols-2 gap-14 items-center">
+          <div>
+            <p className="text-xs tracking-[0.35em] text-gold uppercase">Pessoas · Negócios · Oportunidades</p>
+            <h1 className="mt-6 text-4xl md:text-6xl font-light leading-tight">
+              Conectando você às <span className="font-semibold text-gold-gradient">melhores oportunidades.</span>
+            </h1>
+            <div className="mt-6 h-px w-24 bg-gold-gradient" />
+            <p className="mt-6 max-w-md text-lg text-navy-foreground/80">Ouvir, entender, conectar, solucionar e acompanhar. Juntos vamos mais longe.</p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a href="#contato" className="rounded-full bg-gold-gradient px-8 py-3 font-semibold text-navy shadow-soft transition hover:scale-105">Fale conosco</a>
+              <a href="#sobre" className="rounded-full border border-gold/60 px-8 py-3 font-semibold text-gold transition hover:bg-gold/10">Conheça a ELO</a>
+            </div>
           </div>
-                    <a href="#contato" className="mt-10 table rounded-full bg-gold-gradient px-8 py-3 font-semibold text-navy shadow-soft transition hover:scale-105">Fale conosco</a>
+          <div className="relative flex justify-center">
+            <div className="absolute inset-6 rounded-full bg-gold/30 blur-3xl" />
+            <div className="relative rounded-[2rem] bg-gold-gradient p-[2px] shadow-soft">
+              <div className="rounded-[calc(2rem-2px)] bg-cream px-10 py-10">
+                <img src={logo} alt="Logo ELO Soluções" className="w-64 md:w-80" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -114,9 +139,12 @@ function Index() {
       <section id="parceiros" className="mx-auto max-w-6xl px-6 py-24">
         <h2 className="text-center text-4xl font-bold">Bancos <span className="text-gold-gradient">Parceiros</span></h2>
         <p className="mt-3 text-center text-muted-foreground">Trabalhamos com as principais instituições do mercado.</p>
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="mt-12 flex flex-wrap justify-center gap-5 [&>*]:w-[calc(50%-0.625rem)] md:[&>*]:w-[calc(25%-0.94rem)]">
           {bancos.map((b) => (
-            <div key={b} className="flex h-32 items-center justify-center rounded-2xl border border-border bg-card p-6 text-center text-lg font-semibold shadow-soft">{b}</div>
+            <div key={b.n} className="flex h-36 flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-card p-5 shadow-soft transition hover:-translate-y-1 hover:border-gold">
+              <img src={b.src} alt={`Logo ${b.n}`} className="max-h-16 max-w-[80%] object-contain" loading="lazy" />
+              <span className="text-sm font-semibold">{b.n}</span>
+            </div>
           ))}
         </div>
       </section>
