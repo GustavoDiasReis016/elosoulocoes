@@ -54,7 +54,7 @@ function Index() {
           <div className="mt-8 inline-block rounded-3xl bg-cream p-6 shadow-soft">
             <img src={logo} alt="Logo ELO Soluções" className="w-64 md:w-80" />
           </div>
-                    <a href="#contato" className="mt-10 inline-block rounded-full bg-gold-gradient px-8 py-3 font-semibold text-navy shadow-soft transition hover:scale-105">Fale conosco</a>
+                    <a href="#contato" className="mt-10 table rounded-full bg-gold-gradient px-8 py-3 font-semibold text-navy shadow-soft transition hover:scale-105">Fale conosco</a>
         </div>
       </section>
 
