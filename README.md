@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Elosoulocoes
+
+Preciso que você faça um site para esse estabelecimento de acordo com essa foto que te mandei, tem que haver essas informações da foto que te mandei nas fotos e a logo ta na terceira foto que tem q ter, faça o site no modelo de paleta de cores da logo
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://elosoulocoes.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b0b86639-7e02-450c-a324-453a50ba459b).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
