@@ -3,7 +3,7 @@ import {
   ShieldCheck, Users, Gem, Link2, Target, Eye, Heart,
   Phone, MessageCircle,
 } from "lucide-react";
-import logoMark from "@/assets/elo-logo-mark.png";
+import logoMark from "@/assets/elo-logo-header.png";
 import b_pan from "@/assets/bancos/pan.png";
 import b_aki from "@/assets/bancos/aki.png";
 import b_digio from "@/assets/bancos/digio.png";
