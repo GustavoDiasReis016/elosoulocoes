@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "ELO Soluções — Conectando você às melhores oportunidades" },
-      { name: "description", content: "Crédito, consórcios, seguros, veículos, imóveis e negócios. A ELO Soluções conecta pessoas, negócios e oportunidades." },
+      { name: "description", content: "Crédito consignado e soluções financeiras para servidores federais, estaduais e municipais, Forças Armadas e INSS. A ELO Soluções conecta você às melhores oportunidades." },
       { property: "og:title", content: "ELO Soluções" },
       { property: "og:description", content: "Conectando você às melhores oportunidades." },
       { property: "og:type", content: "website" },
@@ -76,6 +76,31 @@ function Index() {
         </div>
       </section>
 
+      <section id="atendimento" className="bg-secondary py-20">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <p className="text-xs tracking-[0.35em] uppercase font-semibold">Crédito consignado e soluções financeiras</p>
+          <h2 className="mt-4 text-3xl md:text-4xl font-bold">Trabalhamos com <span className="text-gold-gradient">servidores e órgãos públicos</span></h2>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            {["Servidores Federais", "Servidores Estaduais", "Servidores Municipais", "Forças Armadas", "INSS"].map((o) => (
+              <span key={o} className="rounded-full border border-gold bg-card px-6 py-3 font-semibold shadow-soft">{o}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="parceiros" className="mx-auto max-w-6xl px-6 py-24">
+        <h2 className="text-center text-4xl font-bold">Bancos <span className="text-gold-gradient">Parceiros</span></h2>
+        <p className="mt-3 text-center text-muted-foreground">Trabalhamos com as principais instituições do mercado.</p>
+        <div className="mt-12 flex flex-wrap justify-center gap-5 [&>*]:w-[calc(50%-0.625rem)] md:[&>*]:w-[calc(25%-0.94rem)]">
+          {bancos.map((b) => (
+            <div key={b.n} className="flex h-36 flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-card p-5 shadow-soft transition hover:-translate-y-1 hover:border-gold">
+              <img src={b.src} alt={`Logo ${b.n}`} className="max-h-16 max-w-[80%] object-contain" loading="lazy" />
+              <span className="text-sm font-semibold">{b.n}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="sobre" className="mx-auto max-w-6xl px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
         <img src={escritorio.url} alt="Escritório da ELO Soluções" className="w-full rounded-3xl shadow-soft" loading="lazy" />
         <div className="space-y-8">
@@ -117,18 +142,6 @@ function Index() {
       </section>
 
 
-      <section id="parceiros" className="mx-auto max-w-6xl px-6 py-24">
-        <h2 className="text-center text-4xl font-bold">Bancos <span className="text-gold-gradient">Parceiros</span></h2>
-        <p className="mt-3 text-center text-muted-foreground">Trabalhamos com as principais instituições do mercado.</p>
-        <div className="mt-12 flex flex-wrap justify-center gap-5 [&>*]:w-[calc(50%-0.625rem)] md:[&>*]:w-[calc(25%-0.94rem)]">
-          {bancos.map((b) => (
-            <div key={b.n} className="flex h-36 flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-card p-5 shadow-soft transition hover:-translate-y-1 hover:border-gold">
-              <img src={b.src} alt={`Logo ${b.n}`} className="max-h-16 max-w-[80%] object-contain" loading="lazy" />
-              <span className="text-sm font-semibold">{b.n}</span>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <footer id="contato" className="bg-navy text-navy-foreground">
         <div className="mx-auto max-w-6xl px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
