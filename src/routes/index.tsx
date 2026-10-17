@@ -3,7 +3,6 @@ import {
   ShieldCheck, Users, Gem, Link2, Target, Eye, Heart,
   Phone, MessageCircle,
 } from "lucide-react";
-import logo from "@/assets/elo-logo-clean.png";
 import logoMark from "@/assets/elo-logo-mark.png";
 import b_pan from "@/assets/bancos/pan.png";
 import b_aki from "@/assets/bancos/aki.png";
@@ -62,7 +61,7 @@ function Index() {
       <section className="relative overflow-hidden bg-navy text-navy-foreground">
         <img src={hero} alt="Aperto de mãos ao pôr do sol" width={1600} height={1008} className="absolute inset-0 h-full w-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent" />
-        <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32 grid md:grid-cols-2 gap-14 items-center">
+        <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div>
             <h1 className="text-4xl md:text-6xl font-light leading-tight">
               Conectando você às <span className="font-semibold text-gold-gradient">melhores oportunidades.</span>
@@ -72,14 +71,6 @@ function Index() {
             <div className="mt-10 flex flex-wrap gap-4">
               <a href="#contato" className="rounded-full bg-gold-gradient px-8 py-3 font-semibold text-navy shadow-soft transition hover:scale-105">Fale conosco</a>
               <a href="#sobre" className="rounded-full border border-gold/60 px-8 py-3 font-semibold text-gold transition hover:bg-gold/10">Conheça a ELO</a>
-            </div>
-          </div>
-          <div className="relative flex justify-center">
-            <div className="absolute inset-6 rounded-full bg-gold/30 blur-3xl" />
-            <div className="relative rounded-[2rem] bg-gold-gradient p-[2px] shadow-soft">
-              <div className="rounded-[calc(2rem-2px)] bg-cream px-10 py-10">
-                <img src={logo} alt="Logo ELO Soluções" className="w-64 md:w-80" />
-              </div>
             </div>
           </div>
         </div>
