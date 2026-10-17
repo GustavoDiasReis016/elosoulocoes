@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  ShieldCheck, Users, Gem, Link2, Target, Eye, Heart, User, Briefcase,
-  Phone, Instagram, Globe,
+  ShieldCheck, Users, Gem, Link2, Target, Eye, Heart,
+  Phone, MessageCircle,
 } from "lucide-react";
-import logo from "@/assets/elo-logo-hd.png";
-import logoHeader from "@/assets/elo-logo-header.png";
+import logo from "@/assets/elo-logo-clean.png";
+import logoMark from "@/assets/elo-logo-mark.png";
 import b_pan from "@/assets/bancos/pan.png";
 import b_aki from "@/assets/bancos/aki.png";
 import b_digio from "@/assets/bancos/digio.png";
@@ -47,12 +47,15 @@ function Index() {
     <div className="min-h-screen">
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-gold/30">
         <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-3">
-          <a href="#"><img src={logoHeader} alt="ELO Soluções" className="h-14 w-auto" /></a>
+          <a href="#"><img src={logoMark} alt="ELO Soluções" className="h-14 w-auto" /></a>
           <nav className="hidden md:flex gap-8 text-sm font-medium text-foreground">
             <a href="#sobre" className="hover:text-gold">Sobre</a>
             <a href="#parceiros" className="hover:text-gold">Parceiros</a>
             <a href="#contato" className="hover:text-gold">Contato</a>
           </nav>
+          <a href="https://wa.me/5548996349275" className="hidden md:inline-flex items-center gap-2 rounded-full bg-gold-gradient px-5 py-2 text-sm font-semibold text-navy shadow-soft transition hover:scale-105">
+            <MessageCircle className="h-4 w-4" /> WhatsApp
+          </a>
         </div>
       </header>
 
@@ -61,8 +64,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent" />
         <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32 grid md:grid-cols-2 gap-14 items-center">
           <div>
-            <p className="text-xs tracking-[0.35em] text-gold uppercase">Pessoas · Negócios · Oportunidades</p>
-            <h1 className="mt-6 text-4xl md:text-6xl font-light leading-tight">
+            <h1 className="text-4xl md:text-6xl font-light leading-tight">
               Conectando você às <span className="font-semibold text-gold-gradient">melhores oportunidades.</span>
             </h1>
             <div className="mt-6 h-px w-24 bg-gold-gradient" />
@@ -102,6 +104,12 @@ function Index() {
         </div>
       </section>
 
+      <section id="quem-somos" className="mx-auto max-w-4xl px-6 py-24 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold">Onde confiança encontra <span className="text-gold-gradient">oportunidade</span></h2>
+        <p className="mt-6 text-lg text-muted-foreground">Na ELO Soluções, cada história é única. Unimos experiência e proximidade para encontrar a solução certa para cada pessoa e cada negócio.</p>
+        <p className="mt-10 font-script text-4xl md:text-5xl text-primary">Juntos vamos mais longe</p>
+      </section>
+
       <section className="bg-navy text-navy-foreground py-24">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="text-center text-xs tracking-[0.35em] uppercase text-gold">Nossos Valores</h2>
@@ -117,24 +125,6 @@ function Index() {
         </div>
       </section>
 
-
-      <section className="bg-secondary py-24">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-xs tracking-[0.35em] uppercase font-semibold">Nosso Jeito de Fazer</h2>
-          <p className="mt-6 font-script text-4xl md:text-6xl text-primary leading-snug">Ouvir · Entender · Conectar<br />Solucionar · Acompanhar</p>
-          <p className="mt-8 text-lg">Porque para nós, negócio bom é aquele em que todos encontram valor.</p>
-          <div className="mt-12 flex justify-center gap-12 md:gap-20">
-            {[{ icon: User, t: "Pessoas" }, { icon: Briefcase, t: "Negócios" }, { icon: Target, t: "Oportunidades" }].map((p) => (
-              <div key={p.t} className="text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-gold">
-                  <p.icon className="h-7 w-7 text-gold" />
-                </div>
-                <p className="mt-3 text-xs tracking-[0.25em] uppercase">{p.t}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section id="parceiros" className="mx-auto max-w-6xl px-6 py-24">
         <h2 className="text-center text-4xl font-bold">Bancos <span className="text-gold-gradient">Parceiros</span></h2>
@@ -155,9 +145,8 @@ function Index() {
             <p className="font-script text-5xl text-gold">Mais que soluções.<br />Conexões reais.</p>
           </div>
           <div className="space-y-4">
-            <a href="tel:+5547999999999" className="flex items-center gap-3 hover:text-gold"><Phone className="h-5 w-5 text-gold" />(47) 99999-9999</a>
-            <a href="https://instagram.com/elosolucoes" className="flex items-center gap-3 hover:text-gold"><Instagram className="h-5 w-5 text-gold" />@elosolucoes</a>
-            <a href="https://www.elosolucoes.com.br" className="flex items-center gap-3 hover:text-gold"><Globe className="h-5 w-5 text-gold" />www.elosolucoes.com.br</a>
+            <a href="https://wa.me/5548996349275" className="flex items-center gap-3 hover:text-gold"><MessageCircle className="h-5 w-5 text-gold" />(48) 99634-9275 · WhatsApp</a>
+            <a href="tel:+5548996349275" className="flex items-center gap-3 hover:text-gold"><Phone className="h-5 w-5 text-gold" />(48) 99634-9275</a>
           </div>
         </div>
         <div className="border-t border-gold/20 py-6 text-center text-sm text-navy-foreground/60">
