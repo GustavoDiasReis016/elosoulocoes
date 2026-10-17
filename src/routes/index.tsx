@@ -77,12 +77,21 @@ function Index() {
       </section>
 
       <section id="atendimento" className="bg-secondary py-20">
-        <div className="mx-auto max-w-5xl px-6 text-center">
-          <p className="text-xs tracking-[0.35em] uppercase font-semibold">Crédito consignado e soluções financeiras</p>
-          <h2 className="mt-4 text-3xl md:text-4xl font-bold">Trabalhamos com <span className="text-gold-gradient">servidores e órgãos públicos</span></h2>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            {["Servidores Federais", "Servidores Estaduais", "Servidores Municipais", "Forças Armadas", "INSS"].map((o) => (
-              <span key={o} className="rounded-full border border-gold bg-card px-6 py-3 font-semibold shadow-soft">{o}</span>
+        <div className="mx-auto max-w-6xl px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold">Nossos <span className="text-gold-gradient">Serviços</span></h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">Oferecemos crédito consignado para diferentes perfis, sempre com as melhores condições.</p>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { t: "Aposentados e Pensionistas do INSS", d: "Condições especiais para quem tanto contribuiu para o nosso país." },
+              { t: "Servidores Federais", d: "Crédito rápido e sem burocracia para servidores públicos federais." },
+              { t: "Servidores Estaduais", d: "Taxas competitivas e atendimento próximo para servidores estaduais." },
+              { t: "Servidores Municipais", d: "Soluções sob medida para servidores das prefeituras e municípios." },
+              { t: "Forças Armadas", d: "Vantagens exclusivas para militares do Exército, Marinha e Aeronáutica." },
+            ].map((s) => (
+              <div key={s.t} className="rounded-3xl border-t-4 border-gold bg-card px-6 py-8 shadow-soft">
+                <h3 className="text-xl font-bold">{s.t}</h3>
+                <p className="mt-3 text-muted-foreground">{s.d}</p>
+              </div>
             ))}
           </div>
         </div>
