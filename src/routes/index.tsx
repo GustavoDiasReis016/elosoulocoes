@@ -46,7 +46,7 @@ function Index() {
     <div className="min-h-screen">
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-gold/30">
         <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-3">
-          <a href="#"><img src={logoMark} alt="ELO Soluções" className="h-14 w-auto" /></a>
+          <a href="#" aria-label="ELO Soluções — início" className="flex shrink-0 items-center"><img src={logoMark} alt="ELO Soluções — Conectando pessoas a melhores oportunidades" className="h-16 w-auto max-w-[180px] object-contain object-left sm:h-[68px]" decoding="async" fetchPriority="high" /></a>
           <nav className="hidden md:flex gap-8 text-sm font-medium text-foreground">
             <a href="#sobre" className="hover:text-gold">Sobre</a>
             <a href="#parceiros" className="hover:text-gold">Parceiros</a>
